@@ -2,12 +2,17 @@
   "name": "@fusion-design/tabulator",
   "version": "0.1.0",
   "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    "./button": "./src/button.tsx"
+    "./tabulator": "./src/index.tsx"
   },
   "scripts": {
+    "dev": "tsup src/index.ts --format esm --dts --watch",
+    "build": "tsup src/index.ts --format esm --dts",
     "lint": "eslint . --max-warnings 0",
-    "generate:component": "turbo gen react-component"
+    "generate:component": "turbo gen react-component",
+    "release": "npm lint && changeset version && changeset publish"
   },
   "devDependencies": {
     "@fusion-design/eslint-config": "workspace:*",
