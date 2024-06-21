@@ -1,5 +1,5 @@
 {
-  "name": "@repo/eslint-config",
+  "name": "@fusion-design/eslint-config",
   "version": "0.0.0",
   "private": true,
   "files": [
